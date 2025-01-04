@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Incorrectly setting innerHTML without considering existing content
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<p>This text might not be visible correctly.</p>";
+  </script>
+</body>
+</html>
